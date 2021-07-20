@@ -7,7 +7,7 @@ import string
 import json
 import re
 
-dictionary = json.load(open("/home/matthew/Documents/School Subjects/English/English Language Project/Data/Data Gathering/Dictionary Checker/data.json"))
+dictionary = json.load(open("data.json"))
 
 #add words to correct-words.txt which will be counted as correct words even if they are not in the dictionary
 def addCorrectWords():
@@ -42,7 +42,9 @@ wordsList = contents.split("\n")
 
 #get the contents of the file to check
 filename = input("Please enter the name of the file you wish to check:\n")
-filepath = "/home/matthew/Documents/School Subjects/English/English Language Project/Data/Data Gathering/Dictionary Checker/"
+#VSCodium was being funny with filepaths, so I added this variable at the time. 
+#I'll leaeve it but remove the filepath in case I have the same issue again.
+filepath = ""
 file = open(filepath+filename, "rt")
 contents = file.read()
 file.close()
